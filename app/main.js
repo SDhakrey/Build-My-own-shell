@@ -7,3 +7,4 @@ const rl = readline.createInterface({
 });
 
 
+rl.prompt();
