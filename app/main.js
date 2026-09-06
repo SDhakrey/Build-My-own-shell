@@ -7,7 +7,15 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", (command) => {
-  if(command ==="exit"){
+  const parts =command.split(" ");
+
+  if (parts[0] === "echo") {
+  console.log(parts.slice(1).join(" "));
+  rl.prompt();
+  return;
+}
+
+  if(command === "exit"){
     process.exit(0);
   }
 
