@@ -15,6 +15,22 @@ rl.on("line", (command) => {
   return;
 }
 
+if(parts[0] === "type"){
+  if(
+    parts[1] === "echo"||
+    parts[1] === "echo"||
+    parts[1] === "echo"
+
+  ){
+    console.log(`${parts[1]} is a shell builtin`);
+  } else {
+    console.log(`${parts[1]} is not a shell builtin`);
+  }
+  rl.prompt();
+  return;
+} 
+
+
   if(command === "exit"){
     process.exit(0);
   }
